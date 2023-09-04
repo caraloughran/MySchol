@@ -1,11 +1,41 @@
 body {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 figure {
     size:50px;
 }
 
+nav{
+    background-color:#0275d8;
+    border-bottom: 1px solid grey;
+    box-shadow: 20px 20px 50px 15px grey;
+}
+
+#mainimg {
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-bottom: 1px solid grey;
+    box-shadow: 20px 20px 50px 10px grey;
+}
+
+.container{
+    position:relative;
+    text-align:center;
+    background-color:white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding:10px;
+    background-color:white;
+  }
 #scholarships, #info {
-    margin:20px;
+    margin:40px;
+    margin-bottom:60px;
+    margin-right:400px;
 }
