@@ -47,15 +47,15 @@ function presentAUT() {
 }
 
 function presentUOO() {
-    fetch('https://murmuring-caverns-75264-71de7b54696d.herokuapp.com/https://www.otago.ac.nz/study/scholarships/database/?scholarship=Undergraduateentrance'
+    fetch('https://murmuring-caverns-75264-71de7b54696d.herokuapp.com/https://www.otago.ac.nz/study/scholarships/database/undergraduate'
     )
     .then (function (response) {
         return response.text();
     })
     .then (function (html) {
         let returnedUOO = html;
-        let position = returnedUOO.search('<h2><a href="otago0235409.html">The University of Otago Fofoa Accommodation Award</a>');
-        let position2 = returnedUOO.search('{page:WordSection1;}</style></p>');
+        let position = returnedUOO.search('<h2>Find the funding to help support your future</h2>');
+        let position2 = returnedUOO.search('<br> Find out more about scholarships at Otago</h2>');
         let extract = returnedUOO.substring(position, position2);
         showUOOResponse.innerHTML = (extract);
     })
@@ -65,7 +65,7 @@ function presentUOO() {
 }
 
 function presentUOP() {
-    fetch('https://murmuring-caverns-75264-71de7b54696d.herokuapp.com/https://www.otago.ac.nz/study/scholarships/database/?scholarship=Undergraduateentrance'
+    fetch('https://murmuring-caverns-75264-71de7b54696d.herokuapp.com/https://www.otago.ac.nz/study/scholarships/database/undergraduate'
     )
     .then (function(response) {
         responseClone = response.clone();
