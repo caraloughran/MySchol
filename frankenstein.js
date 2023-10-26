@@ -54,8 +54,8 @@ function presentUOO() {
     })
     .then (function (html) {
         let returnedUOO = html;
-        let position = returnedUOO.search('<h2>Find the funding to help support your future</h2>');
-        let position2 = returnedUOO.search('<br> Find out more about scholarships at Otago</h2>');
+        let position = returnedUOO.search(' <main id="main" class="content">');
+        let position2 = returnedUOO.search('href="mailto:scholarships@otago.ac.nz">scholarships@otago.ac.nz</a></p><ul><p class="clearall"></p></ul> ');
         let extract = returnedUOO.substring(position, position2);
         showUOOResponse.innerHTML = (extract);
     })
